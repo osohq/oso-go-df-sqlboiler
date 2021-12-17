@@ -63,7 +63,6 @@ func (a MyAdapter) BuildQuery(filter *types.Filter) (interface{}, error) {
 		mods = append(mods, join)
 	}
 
-	// todo handle the ORs, not sure how yet
 	for i, conditions := range filter.Conditions {
 		group := make([]qm.QueryMod, 0)
 		for _, condition := range conditions {
